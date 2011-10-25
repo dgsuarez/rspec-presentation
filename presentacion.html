@@ -4909,33 +4909,29 @@ jQuery.extend( jQuery.easing,
             </div>
           </div>
         
-          <div class=" ">
+          <div class="">
             <div id="slide-1" class="content">
-              <div class="highlight ruby code highlight"><pre><span class="k">class</span> <span class="nc">TestSimpleNumber</span> <span class="o">&lt;</span> <span class="no">Test</span><span class="o">::</span><span class="no">Unit</span><span class="o">::</span><span class="no">TestCase</span>
+              <pre><code>SimpleNumber#add
 
-  <span class="k">def</span> <span class="nf">test_add</span>
-    <span class="n">assert_equal</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="no">SimpleNumber</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="p">)</span>
-  <span class="k">end</span>
-
-  <span class="k">def</span> <span class="nf">test_multiply</span>
-    <span class="n">assert_equal</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="no">SimpleNumber</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="p">)</span>
-  <span class="k">end</span>
-
-<span class="k">end</span>
-</pre></div>
+SimpleNumber#multiply
+</code></pre>
             </div>
           </div>
         
           <div class=" ">
             <div id="slide-2" class="content">
-              <div class="highlight ruby code highlight"><pre><span class="n">describe</span> <span class="no">SimpleNumber</span> <span class="k">do</span>
+              <div class="highlight ruby code highlight"><pre><span class="k">class</span> <span class="nc">TestSimpleNumber</span> <span class="o">&lt;</span> <span class="no">Test</span><span class="o">::</span><span class="no">Unit</span><span class="o">::</span><span class="no">TestCase</span>
 
-  <span class="n">it</span> <span class="s2">"should add numbers"</span> <span class="k">do</span>
-    <span class="no">SimpleNumber</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">should</span> <span class="n">eql</span> <span class="mi">4</span>
+ <span class="k">def</span> <span class="nf">setup</span>
+   <span class="vi">@num</span> <span class="o">=</span> <span class="no">SimpleNumber</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+ <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">test_add</span>
+    <span class="n">assert_equal</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="vi">@num</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="p">)</span>
   <span class="k">end</span>
 
-  <span class="n">it</span> <span class="s2">"should multiply numbers"</span> <span class="k">do</span>
-    <span class="no">SimpleNumber</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">should</span> <span class="n">eql</span> <span class="mi">6</span>
+  <span class="k">def</span> <span class="nf">test_multiply</span>
+    <span class="n">assert_equal</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="vi">@num</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="p">)</span>
   <span class="k">end</span>
 
 <span class="k">end</span>
@@ -4943,13 +4939,22 @@ jQuery.extend( jQuery.easing,
             </div>
           </div>
         
-          <div class="">
+          <div class=" ">
             <div id="slide-3" class="content">
-              <div class="highlight ruby code highlight"><pre><span class="k">def</span> <span class="nf">test_add</span>
-  <span class="n">assert_equal</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="no">SimpleNumber</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="p">)</span>
-  <span class="n">assert_equal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="no">SimpleNumber</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span> <span class="p">)</span>
-  <span class="n">assert_equal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="no">SimpleNumber</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="p">)</span>
-  <span class="n">assert_equal</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="no">SimpleNumber</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span> <span class="p">)</span>
+              <div class="highlight ruby code highlight"><pre><span class="n">describe</span> <span class="no">SimpleNumber</span> <span class="k">do</span>
+
+  <span class="n">before</span> <span class="ss">:each</span> <span class="k">do</span>
+    <span class="vi">@num</span> <span class="o">=</span> <span class="no">SimpleNumber</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+  <span class="k">end</span>
+
+  <span class="n">it</span> <span class="s2">"should add numbers"</span> <span class="k">do</span>
+    <span class="vi">@num</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">should</span> <span class="n">eql</span> <span class="mi">4</span>
+  <span class="k">end</span>
+
+  <span class="n">it</span> <span class="s2">"should multiply numbers"</span> <span class="k">do</span>
+    <span class="vi">@num</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">should</span> <span class="n">eql</span> <span class="mi">6</span>
+  <span class="k">end</span>
+
 <span class="k">end</span>
 </pre></div>
             </div>
@@ -4957,30 +4962,17 @@ jQuery.extend( jQuery.easing,
         
           <div class="">
             <div id="slide-4" class="content">
-              <div class="highlight ruby code highlight"><pre><span class="n">it</span> <span class="s2">"should add + and - negative numbers"</span> <span class="k">do</span>
-  <span class="no">SimpleNumber</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">should</span> <span class="n">eql</span> <span class="mi">0</span>
-  <span class="no">SimpleNumber</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">should</span> <span class="n">eql</span> <span class="mi">0</span>
-<span class="k">end</span>
-
-<span class="n">it</span> <span class="s2">"should add - numbers"</span> <span class="k">do</span>
-  <span class="no">SimpleNumber</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">should</span> <span class="n">eql</span> <span class="o">-</span><span class="mi">4</span>
-<span class="k">end</span>
+              <div class="highlight ruby code highlight"><pre><span class="n">my_list</span><span class="o">.</span><span class="n">should</span> <span class="n">have</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">items</span>
+<span class="nb">lambda</span> <span class="p">{</span><span class="n">my_list</span> <span class="o">&lt;&lt;</span> <span class="mi">3</span><span class="p">}</span><span class="o">.</span><span class="n">should</span> <span class="n">change</span><span class="p">(</span><span class="n">my_list</span><span class="p">,</span> <span class="ss">:lenght</span><span class="p">)</span><span class="o">.</span><span class="n">by</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">lambda</span> <span class="p">{</span><span class="n">my_list</span><span class="o">.</span><span class="n">not_defined_method</span><span class="p">}</span><span class="o">.</span><span class="n">should</span> <span class="n">raise_error</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">should_not</span> <span class="n">be_empty</span> <span class="c1">#empty?</span>
+<span class="n">parent</span><span class="o">.</span><span class="n">should</span> <span class="n">have_children</span> <span class="c1">#has_children?</span>
 </pre></div>
             </div>
           </div>
         
           <div class="">
             <div id="slide-5" class="content">
-              <div class="highlight ruby code highlight"><pre><span class="n">my_list</span><span class="o">.</span><span class="n">should</span> <span class="n">have</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">items</span>
-<span class="nb">lambda</span> <span class="p">{</span><span class="n">my_list</span> <span class="o">&lt;&lt;</span> <span class="mi">3</span><span class="p">}</span><span class="o">.</span><span class="n">should</span> <span class="n">change</span><span class="p">(</span><span class="n">my_list</span><span class="p">,</span> <span class="ss">:lenght</span><span class="p">)</span><span class="o">.</span><span class="n">by</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="nb">lambda</span> <span class="p">{</span><span class="n">my_list</span><span class="o">.</span><span class="n">not_defined_method</span><span class="p">}</span><span class="o">.</span><span class="n">should</span> <span class="n">raise_error</span>
-<span class="o">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="o">].</span><span class="n">should</span> <span class="o">=~</span> <span class="o">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="o">]</span>
-</pre></div>
-            </div>
-          </div>
-        
-          <div class="">
-            <div id="slide-6" class="content">
               <h1>Dudas?</h1>
             </div>
           </div>
