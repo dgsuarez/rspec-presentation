@@ -1,6 +1,8 @@
 !SLIDE
 
-#imagen
+![XKCD running the specs](running.png)
+
+Original: [http://xkcd.com/303/](http://xkcd.com/303/)
 
 !SLIDE 
 
