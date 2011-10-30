@@ -10,6 +10,10 @@ div.code {
   font-family: monospace;
 }
 
-#slide-7 p, #slide-1 p {
+p {
   text-align: center;
+}
+
+#slide-0 p {
+  font-size: 0.5em;
 }

@@ -1,4 +1,5 @@
 !SLIDE
+#RSPEC
 
 ![XKCD running the specs](running.png)
 
