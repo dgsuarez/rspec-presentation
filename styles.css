@@ -10,3 +10,6 @@ div.code {
   font-family: monospace;
 }
 
+#slide-7 p, #slide-1 p {
+  text-align: center;
+}

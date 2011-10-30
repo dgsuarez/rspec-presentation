@@ -84,5 +84,12 @@ Original: [http://xkcd.com/303/](http://xkcd.com/303/)
 @@@
 
 !SLIDE
-# Dudas?
 
+![Ciclo rojo-verde](ciclo-rojo-verde.png)
+
+!SLIDE
+#Gracias
+
+[@dg\_suarez](http://twitter.com/dg_suarez)
+
+[http://github.com/dgsuarez](http://github.com/dgsuarez/)
