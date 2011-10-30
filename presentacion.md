@@ -1,12 +1,6 @@
 !SLIDE
 
-# RSpec
-
-!SLIDE
-
-    SimpleNumber#add
-
-    SimpleNumber#multiply
+#imagen
 
 !SLIDE 
 
@@ -61,5 +55,32 @@
 
 !SLIDE
 
+@@@ ruby
+    class Endpoint
+      def post(name)
+        HTTParty.post("http://myservice.com", :name => name)
+      end
+    end
+@@@
+
+!SLIDE
+
+@@@ ruby
+    it "should send the name to the service" do
+      HTTParty.stub(:post).with(anything).and_return("OK")
+      Endpoint.new.post("name").should eql "OK"
+    end
+@@@
+
+!SLIDE
+
+@@@ ruby
+    it "should send the name to the service" do
+      HTTParty.should_receive(:post).with("http://myservice.com", :name => "name")
+      Endpoint.new.post("name")
+    end
+@@@
+
+!SLIDE
 # Dudas?
 
