@@ -12,8 +12,9 @@ div.code {
 
 p {
   text-align: center;
+  font-size: 0.5em;
 }
 
-#slide-0 p {
-  font-size: 0.5em;
+div.code {
+  font-size: 0.7em;
 }

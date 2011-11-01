@@ -79,7 +79,8 @@ Original: [http://xkcd.com/303/](http://xkcd.com/303/)
 
 @@@ ruby
     it "should send the name to the service" do
-      HTTParty.should_receive(:post).with("http://myservice.com", :name => "name")
+      HTTParty.should_receive(:post)
+        .with("http://myservice.com", :name => "name")
       Endpoint.new.post("name")
     end
 @@@
