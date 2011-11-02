@@ -59,9 +59,9 @@ Original: [http://xkcd.com/303/](http://xkcd.com/303/)
 !SLIDE
 
 @@@ ruby
-    class Endpoint
-      def post(name)
-        HTTParty.post("http://myservice.com", :name => name)
+    class NameList
+      def add(name)
+        HTTParty.post("http://mylist.com", :name => name)
       end
     end
 @@@
@@ -71,7 +71,7 @@ Original: [http://xkcd.com/303/](http://xkcd.com/303/)
 @@@ ruby
     it "should send the name to the service" do
       HTTParty.stub(:post).with(anything).and_return("OK")
-      Endpoint.new.post("name").should eql "OK"
+      NameList.new.post("toño").should eql "OK"
     end
 @@@
 
@@ -80,8 +80,8 @@ Original: [http://xkcd.com/303/](http://xkcd.com/303/)
 @@@ ruby
     it "should send the name to the service" do
       HTTParty.should_receive(:post)
-        .with("http://myservice.com", :name => "name")
-      Endpoint.new.post("name")
+        .with("http://mylist.com", :name => "toño")
+      NameList.new.post("toño")
     end
 @@@
 
