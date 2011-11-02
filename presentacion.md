@@ -87,6 +87,14 @@ Original: [http://xkcd.com/303/](http://xkcd.com/303/)
 
 !SLIDE
 
+@@@ ruby
+    #pseudocódigo
+    t = Transaction.new
+    t.start { run_test }
+    t.rollback
+@@@
+!SLIDE
+
 ![Ciclo rojo-verde](ciclo-rojo-verde.png)
 
 !SLIDE
